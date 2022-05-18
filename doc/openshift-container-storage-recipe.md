@@ -1,7 +1,9 @@
 # Deploy OpenShift Container Storage
 
 > ###### Note
-> This method is not supported for ROKS clusters.  Follow the instructions in the [ROKS documentation](https://cloud.ibm.com/docs/openshift?topic=openshift-deploy-odf-vpc) to deploy storage.
+> This recipe does not work in ROKS clusters.
+>
+> For ROKS clusters, please follow the [ROKS documentation](https://cloud.ibm.com/docs/openshift?topic=openshift-deploy-odf-vpc)
 
 ## Infrastructure - Kustomization.yaml
 
@@ -66,7 +68,7 @@
     values: |
       ${STORAGE_CHART_NAME}:
         channel: ${CHANNEL}
-        sizeGiB: 512
+        sizeGiB: ${SIZE_GIBIBYTE}
         storageClass: ${STORCLASS}
         argo:
           namespace: ${GIT_GITOPS_NAMESPACE}
