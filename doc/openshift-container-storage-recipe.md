@@ -68,7 +68,7 @@
     values: |
       ${STORAGE_CHART_NAME}:
         channel: ${CHANNEL}
-        sizeGiB: ${SIZE_GIBIBYTE}
+        sizeGiB: ${STORAGE_SIZE}
         storageClass: ${STORCLASS}
         argo:
           namespace: ${GIT_GITOPS_NAMESPACE}
@@ -80,6 +80,8 @@
     - For OCP version 4.9 and greater, use STORAGE_CHART_NAME=odf-operator
 
     `CHANNEL` is the subscription channel for your storage operator, in the form of stable-4.x where `x` is the minor version of OpenShift eg 4.`9`
+
+    `STORAGE_SIZE` is the size, in GiBs of your storage cluster. Set to `512` for small clusters.
 
     `STORCLASS` is the default storage class on your cluster
 
