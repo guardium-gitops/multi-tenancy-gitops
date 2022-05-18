@@ -1,7 +1,7 @@
 # Deploy OpenShift Container Storage
 
 > ###### Note
-> This method is not supported in ROKS.  For ROKS deployments, follow the instructions in the [ROKS documentation](https://cloud.ibm.com/docs/openshift?topic=openshift-deploy-odf-vpc)
+> This method is not supported for ROKS clusters.  Follow the instructions in the [ROKS documentation](https://cloud.ibm.com/docs/openshift?topic=openshift-deploy-odf-vpc) to deploy storage.
 
 ## Infrastructure - Kustomization.yaml
 
