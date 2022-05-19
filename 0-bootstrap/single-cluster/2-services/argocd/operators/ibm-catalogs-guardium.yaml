@@ -37,17 +37,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
----
-apiVersion: operators.coreos.com/v1
-kind: OperatorGroup
-metadata:
-  annotations:
-    olm.providedAPIs: ""
-  name: ibm-common-services-operators
-  namespace: ibm-common-services
-spec:
-  targetNamespaces:
-  - ibm-common-services
-status:
-  namespaces:
-  - ibm-common-services
