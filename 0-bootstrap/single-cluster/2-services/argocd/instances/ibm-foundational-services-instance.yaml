@@ -25,5 +25,5 @@ spec:
           ibmcommonservices:
             name: common-service
             spec:
-              size: small
+              size: medium
 
