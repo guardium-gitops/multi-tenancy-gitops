@@ -2,7 +2,7 @@
 
 ## Storage
 
-To use OpenShift Data Foundation as your storage solution for Guardium Insights, first follow the [ODF Recipe](./openshift-container-storage-recipe.md) and then continue with this guide.
+The [current validated storage solution](https://www.ibm.com/docs/en/guardium-insights/3.1.x?topic=requirements-validated-storage-options) for Guardium Insights outside of IBM Cloud is OpenShift Data Foundation.  To use OpenShift Data Foundation as your storage solution for Guardium Insights, first follow the [ODF Recipe](./openshift-container-storage-recipe.md) and then continue with this guide.
 
 ## Infrastructure - Kustomization.yaml
 
