@@ -31,6 +31,17 @@ spec:
               updateStrategy:
                 registryPoll:
                   interval: 45m
+          ibmoperators:
+            name: ibm-operator-catalog
+            catalog:
+              displayName: "IBM Operator Catalog"
+              publisher: IBM
+              sourceType: grpc
+              image: icr.io/cpopen/ibm-operator-catalog
+              updateStrategy:
+                registryPoll:
+                  interval: 45m
+
   syncPolicy:
     automated:
       prune: true
