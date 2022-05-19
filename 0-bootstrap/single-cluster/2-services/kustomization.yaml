@@ -54,6 +54,7 @@ resources:
 
 ## IBM Catalogs
 # - argocd/operators/ibm-catalogs.yaml
+- argocd/operators/ibm-catalogs-guardium.yaml
 
 # B2BI
 #- argocd/instances/ibm-sfg-db2-prod.yaml
