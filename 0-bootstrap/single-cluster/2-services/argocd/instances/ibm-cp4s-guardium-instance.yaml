@@ -16,7 +16,7 @@ spec:
   project: services
   repoURL: ""
   source:
-    path: instances/instana-grafana
+    path: instances/ibm-cp4s-guardium-instance
   syncPolicy:
     automated:
       prune: true
