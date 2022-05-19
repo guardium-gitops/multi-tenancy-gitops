@@ -41,6 +41,28 @@ spec:
               updateStrategy:
                 registryPoll:
                   interval: 45m
+          db2u:
+            name: ibm-db2uoperator-catalog
+            catalog:
+              displayName: IBM Db2U Catalog
+              image: docker.io/ibmcom/ibm-db2uoperator-catalog@sha256:5347c6f194868eb7531bd15cf584dabb0dc82b8674409e8ffbbea2c5bc4bcafe
+              imagePullPolicy: Always
+              publisher: IBM
+              sourceType: grpc
+              updateStrategy:
+                registryPoll:
+                  interval: 45m
+          ibmredis:
+            name: ibm-cloud-databases-redis-operator-catalog
+            catalog:
+              displayName: ibm-cloud-databases-redis-operator-catalog
+              publisher: IBM
+              sourceType: grpc
+              image: icr.io/cpopen/ibm-cloud-databases-redis-catalog@sha256:bb65ca87c987b040b0a8cea4cf44af9bf1a0110442f249529032dd580cc29b36
+              updateStrategy:
+                registryPoll:
+                  interval: 45m
+
 
   syncPolicy:
     automated:
