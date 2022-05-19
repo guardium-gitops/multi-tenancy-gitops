@@ -18,7 +18,7 @@ spec:
     helm:
       values: |
         refarch-machinesets:
-          infrastructureId: guardium-5mtqr
+          infrastructureId: guardium-qb9t7
           # cloudProvider.name set to aws, azure, ibmcloud or vsphere
           # cloudProvider.managed set to true for ROSA, ARO, ROKS
           cloudProvider:
@@ -28,7 +28,7 @@ spec:
           cloud:
             # TODO: HOW DO WE GET THESE?? ADD DOCUMENTATION
             region: us-east-2
-            image: ami-03d9208319c96db0c
+            image: ami-09145c219cb4df3e1
             infraNodes:
               nodeCount: "0"
           # only for "vsphere" - ignored for other

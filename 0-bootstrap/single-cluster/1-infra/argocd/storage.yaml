@@ -17,9 +17,9 @@ spec:
     path: storage
     helm:
       values: |
-        odf-operator:
-          channel: stable-4.9
-          sizeGiB: 2048
+        ocs-operator:
+          channel: stable-4.8
+          sizeGiB: 4096
           storageClass: gp2
           argo:
             namespace: openshift-gitops
