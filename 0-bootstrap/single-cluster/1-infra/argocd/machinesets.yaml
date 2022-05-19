@@ -31,6 +31,9 @@ spec:
             image: ami-09145c219cb4df3e1
             infraNodes:
               nodeCount: "0"
+            cloudpakNodes:
+              nodeCount: "3"
+              instanceType: m5.8xlarge
           # only for "vsphere" - ignored for other
           vsphere:
             networkName: ${VS_NETWORK}
