@@ -32,7 +32,7 @@ spec:
             infraNodes:
               nodeCount: "0"
             cloudpakNodes:
-              nodeCount: "3"
+              nodeCount: "1"
               instanceType: m5.8xlarge
           # only for "vsphere" - ignored for other
           vsphere:
