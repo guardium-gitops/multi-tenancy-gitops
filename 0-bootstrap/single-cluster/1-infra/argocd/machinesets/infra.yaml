@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: machineset-storage
+  name: machineset-infra
   labels:
     gitops.tier.layer: infra
   annotations:

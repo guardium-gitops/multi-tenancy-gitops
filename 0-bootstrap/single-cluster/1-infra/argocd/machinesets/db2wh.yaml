@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: machineset-storage
+  name: machineset-db2wh
   labels:
     gitops.tier.layer: infra
   annotations:
@@ -27,19 +27,17 @@ spec:
             ami: ami-09145c219cb4df3e1
         
         machineset:
-          name: db2u
-          clusterRole: db2u
-          clusterType: db2u
-          instanceType: m5.4xlarge
+          name: db2wh
+          clusterRole: db2wh
+          clusterType: db2wh
+          instanceType: m5.8xlarge
           taints:
             - effect: "NoSchedule"
-              key: "node.ocs.openshift.io/storage"
-              value: "true"
+              key: "icp4data"
+              value: "database-db2wh"
           labels:
-            node-role.kubernetes.io/storage: ""
-            cluster.ocs.openshift.io/openshift-storage: ""
+            icp4data=database-db2wh
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-
