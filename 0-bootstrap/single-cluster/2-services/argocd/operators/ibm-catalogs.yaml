@@ -46,7 +46,6 @@ spec:
             catalog:
               displayName: IBM Db2U Catalog
               image: docker.io/ibmcom/ibm-db2uoperator-catalog@sha256:5347c6f194868eb7531bd15cf584dabb0dc82b8674409e8ffbbea2c5bc4bcafe
-              imagePullPolicy: Always
               publisher: IBM
               sourceType: grpc
               updateStrategy:
