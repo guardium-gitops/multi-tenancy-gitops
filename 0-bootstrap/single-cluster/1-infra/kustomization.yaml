@@ -36,7 +36,7 @@ resources:
 #- argocd/scc-wkc-iis.yaml
 # - argocd/storage.yaml
 #- argocd/infraconfig.yaml
-- argocd/machinesets.yaml
+# - argocd/machinesets.yaml
 patches:
 - target:
     group: argoproj.io
