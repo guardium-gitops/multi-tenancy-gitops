@@ -36,6 +36,7 @@ spec:
               key: "$YOUR_TAINT_KEY"
               value: "$YOUR_TAINT_VALUE"
           labels:
+            node-role.kubernetes.io/worker: ""
             $YOUR_LABEL_KEY: "$YOUR_LABEL_VALUE"
   syncPolicy:
     automated:
