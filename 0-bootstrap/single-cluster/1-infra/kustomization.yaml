@@ -39,6 +39,7 @@ resources:
 # - argocd/machinesets.yaml
 - argocd/machinesets/storage.yaml
 - argocd/machinesets/db2wh.yaml
+- argocd/scc-guardium.yaml
 
 patches:
 - target:
