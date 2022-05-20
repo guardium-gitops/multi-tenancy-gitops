@@ -1,0 +1,44 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: machineset-storage
+  labels:
+    gitops.tier.layer: infra
+  annotations:
+    argocd.argoproj.io/sync-wave: "100"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: infra
+  source:
+    path: machinesets-v2
+    helm:
+      values: |
+        infrastructureId: $INFRASTRUCTURE_ID
+
+        cloud:
+          name: $CLOUD_PROVIDER
+          managed: ${CLOUD_MANAGED:-false} # set to true for ARO, ROSA
+          region: $CLOUD_REGION
+          aws:
+            ami: $AWS_AMI_ID
+        
+        machineset:
+          name: $MACHINESET_NAME
+          clusterRole: $CUSTOM_ROLE
+          clusterType: $CUSTOM_TYPE
+          instanceType: $INSTANCE_TYPE
+          taints:
+            - effect: "${YOUR_TAINT_EFFECT:-NoSchedule}"
+              key: "$YOUR_TAINT_KEY"
+              value: "$YOUR_TAINT_VALUE"
+          labels:
+            $YOUR_LABEL_KEY: "$YOUR_LABEL_VALUE"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
