@@ -36,7 +36,7 @@ spec:
               key: "icp4data"
               value: "database-db2wh"
           labels:
-            node-role.kubernetes.io/worker: ""
+            node-role.kubernetes.io/db2wh: ""
             icp4data: database-db2wh
   syncPolicy:
     automated:
