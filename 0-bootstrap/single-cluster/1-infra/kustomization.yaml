@@ -37,7 +37,7 @@ resources:
 # - argocd/storage.yaml
 #- argocd/infraconfig.yaml
 # - argocd/machinesets.yaml
-- argocd/machinests/storage.yaml
+- argocd/machinesets/storage.yaml
 
 patches:
 - target:
