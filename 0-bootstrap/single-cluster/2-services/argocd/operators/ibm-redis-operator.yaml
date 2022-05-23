@@ -25,6 +25,7 @@ spec:
         operatorName: ibm-cloud-databases-redis-operator
         operatorSource: ibm-cloud-databases-redis-operator-catalog
         operatorSourceNamespace: openshift-marketplace
+        operatorGroup: true
         config:
           env:
             - name: REGISTRY_SECRET
