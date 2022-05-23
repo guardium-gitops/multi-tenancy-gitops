@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ibm-redis-operator
+  name: ibm-db2u-operator
   annotations:
     argocd.argoproj.io/sync-wave: "200"
   labels:
