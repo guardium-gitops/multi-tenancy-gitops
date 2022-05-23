@@ -19,21 +19,14 @@ spec:
     path: operators/generic-subscription
     helm:
       values: |
-        name: ibm-cloud-databases-redis-operator-subscription
+        name: ibm-db2uoperator-subscription
         namespace: guardium
-        channel: v1.3
-        operatorName: ibm-cloud-databases-redis-operator
-        operatorSource: ibm-cloud-databases-redis-operator-catalog
+        channel: v1.1
+        operatorName: db2u-operator
+        operatorSource: ibm-db2uoperator-catalog
         operatorSourceNamespace: openshift-marketplace
-        operatorGroup: true
-        config:
-          env:
-            - name: REGISTRY_SECRET
-              value: ibm-entitlement-key
+        startingCSV: db2u-operator.v1.1.6
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-  
-  
-  
