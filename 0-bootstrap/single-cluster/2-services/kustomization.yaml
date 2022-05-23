@@ -112,6 +112,7 @@ resources:
 
 # Guardium Insights.yaml
 - argocd/instances/ibm-cp4s-guardium-instance.yaml
+- argocd/operators/ibm-redis-operator.yaml
 
 patches:
 - target:

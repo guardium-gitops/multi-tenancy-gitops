@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ibm-catalogs
+  annotations:
+    argocd.argoproj.io/sync-wave: "200"
+  labels:
+    gitops.tier.group: ibm-cloudpak
+    gitops.tier.layer: services
+    gitops.tier.source: git
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: openshift-marketplace
+    server: 'https://kubernetes.default.svc'
+  project: services
+  source:
+    path: operators/generic-subscription
+    helm:
+      values: |
+        subscription:
+          name: ibm-cloud-databases-redis-operator-subscription
+          channel: v1.3
+          operatorName: ibm-cloud-databases-redis-operator
+          operatorSource: ibm-cloud-databases-redis-operator-catalog
+          operatorSourceNamespace: openshift-marketplace
+          config:
+            env:
+              - name: REGISTRY_SECRET
+                value: ibm-entitlement-key
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  
+  
+  
