@@ -111,8 +111,9 @@ resources:
 #- argocd/instances/baas-instance.yaml
 
 # Guardium Insights.yaml
-- argocd/instances/ibm-cp4s-guardium-instance.yaml
 - argocd/operators/ibm-redis-operator.yaml
+- argocd/instances/ibm-cp4s-guardium-instance.yaml
+
 
 patches:
 - target:
