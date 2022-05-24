@@ -52,9 +52,9 @@ spec:
                 registryPoll:
                   interval: 45m
           ibmredis:
-            name: ibm-cloud-redis
+            name: ibm-cloud-databases-redis-operator-catalog
             catalog:
-              displayName: ibm-cloud-databases-redis-operator-catalog
+              displayName: IBM Cloud Redis Database Catalog
               publisher: IBM
               sourceType: grpc
               image: icr.io/cpopen/ibm-cloud-databases-redis-catalog@sha256:bb65ca87c987b040b0a8cea4cf44af9bf1a0110442f249529032dd580cc29b36
