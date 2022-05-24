@@ -17,6 +17,9 @@ spec:
   project: services
   source:
     path: operators/ibm-cp4s-guardium-operator
+    helm:
+      values: |
+        namespace: guardium
   syncPolicy:
     automated:
       prune: true
