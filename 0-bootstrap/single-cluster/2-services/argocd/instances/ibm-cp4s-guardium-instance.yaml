@@ -26,6 +26,7 @@ spec:
         db2:
           size: 1
           dataPvcSize: 1000
+          encrypt: NO
 
   syncPolicy:
     automated:
