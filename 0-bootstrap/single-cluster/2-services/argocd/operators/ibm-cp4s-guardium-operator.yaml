@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ibm-cp4s-guardium-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "200"
+  labels:
+    gitops.tier.group: ibm-cloudpak
+    gitops.tier.layer: services
+    gitops.tier.source: git
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: guardium
+    server: 'https://kubernetes.default.svc'
+  project: services
+  source:
+    path: operators/ibm-cp4s-guardium-operator
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  
+  
+  
