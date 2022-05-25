@@ -24,7 +24,7 @@ spec:
         templateSize: values-small
         domain: guardium.aws.ibm-gtmaa.dev
         db2:
-          size: 1
+          size: 2
           dataPvcSize: 500Gi
           encrypt: NO
         mongodb:
