@@ -20,17 +20,17 @@ spec:
     helm:
       values: |
         catalogs:
-          # commonservices:
-          #   name: opencloud-operators
-          #   catalog:
-          #     displayName: IBMCS Operators
-          #     publisher: IBM
-          #     sourceType: grpc
-          #     # Guardium 3.1.5
-          #     image: icr.io/cpopen/ibm-common-service-catalog@sha256:35fd53f72a5721ce5be59070123f9e07903ec86940d3f5a43e2728dab6b8c957
-          #     updateStrategy:
-          #       registryPoll:
-          #         interval: 45m
+          commonservices:
+            name: opencloud-operators
+            catalog:
+              displayName: IBMCS Operators
+              publisher: IBM
+              sourceType: grpc
+              # Guardium 3.1.5
+              image: icr.io/cpopen/ibm-common-service-catalog@sha256:35fd53f72a5721ce5be59070123f9e07903ec86940d3f5a43e2728dab6b8c957
+              updateStrategy:
+                registryPoll:
+                  interval: 45m
           ibmoperators:
             name: ibm-operator-catalog
             catalog:
