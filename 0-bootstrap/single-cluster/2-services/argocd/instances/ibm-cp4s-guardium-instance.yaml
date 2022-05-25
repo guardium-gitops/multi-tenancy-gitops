@@ -27,9 +27,8 @@ spec:
           size: 2
           dataPvcSize: 500
           encrypt: NO
-        guardium:
-          dataPvcSize: 100
         mongodb:
+          dataPvcSize: 100
           logsPvcSize: 100
   syncPolicy:
     automated:
