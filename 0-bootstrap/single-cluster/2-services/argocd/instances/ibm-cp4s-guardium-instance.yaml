@@ -25,9 +25,12 @@ spec:
         domain: guardium.aws.ibm-gtmaa.dev
         db2:
           size: 2
-          dataPvcSize: 1000
+          dataPvcSize: 500
           encrypt: NO
-
+        guardium:
+          dataPvcSize: 100
+        mongodb:
+          logsPvcSize: 100
   syncPolicy:
     automated:
       prune: true
