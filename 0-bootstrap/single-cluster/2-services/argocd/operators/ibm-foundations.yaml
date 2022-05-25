@@ -27,7 +27,7 @@ spec:
                 resources: {}
               installPlanApproval: Automatic
               name: ibm-common-service-operator
-              source: opencloud-operators
+              source: ibm-operator-catalog
               sourceNamespace: openshift-marketplace
   syncPolicy:
     automated:
