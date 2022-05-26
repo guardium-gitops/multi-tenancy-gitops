@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: ibm-redis-operator
   annotations:
-    argocd.argoproj.io/sync-wave: "200"
+    argocd.argoproj.io/sync-wave: "230"
   labels:
     gitops.tier.group: ibm-cloudpak
     gitops.tier.layer: services
