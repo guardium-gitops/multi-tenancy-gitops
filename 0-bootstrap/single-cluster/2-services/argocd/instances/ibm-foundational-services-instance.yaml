@@ -26,4 +26,6 @@ spec:
             name: common-service
             spec:
               size: medium
+              license:
+                accept: true
 
