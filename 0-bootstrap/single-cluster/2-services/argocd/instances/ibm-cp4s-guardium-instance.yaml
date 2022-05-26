@@ -24,14 +24,6 @@ spec:
         templateSize: values-small
         domain: guardium.aws.ibm-gtmaa.dev
         storageClassRWO: gp2
-        db2:
-          size: 2
-          dataPvcSize: 500Gi
-          metaPvcSize: 500Gi
-          encrypt: NO
-        mongodb:
-          dataPvcSize: 100Gi
-          logsPvcSize: 100Gi
   syncPolicy:
     automated:
       prune: true
