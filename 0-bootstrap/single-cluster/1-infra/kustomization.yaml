@@ -42,6 +42,14 @@ resources:
 # - argocd/scc-guardium.yaml
 # - argocd/rbac/guardium.yaml
 
+- argocd/consolenotification.yaml
+- argocd/namespace-ibm-common-services.yaml
+- argocd/namespace-guardium.yaml
+- argocd/namespace-openshift-storage.yaml
+- argocd/storage.yaml 
+- argocd/scc-guardium.yaml
+- argocd/rbac/guardium.yaml
+
 patches:
 - target:
     group: argoproj.io
