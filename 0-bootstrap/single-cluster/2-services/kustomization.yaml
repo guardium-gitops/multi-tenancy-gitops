@@ -114,10 +114,10 @@ resources:
 - argocd/operators/ibm-catalogs.yaml
 - argocd/operators/ibm-foundations.yaml 
 # - argocd/instances/ibm-foundational-services-instance.yaml
-# - argocd/operators/ibm-redis-subscription.yaml
-# - argocd/operators/ibm-db2u-subscription.yaml
-# - argocd/operators/ibm-cp4s-guardium-operator.yaml
-# - argocd/instances/ibm-cp4s-guardium-instance.yaml
+- argocd/operators/ibm-redis-subscription.yaml
+- argocd/operators/ibm-db2u-subscription.yaml
+- argocd/operators/ibm-cp4s-guardium-operator.yaml
+- argocd/instances/ibm-cp4s-guardium-instance.yaml
 
 
 patches:
