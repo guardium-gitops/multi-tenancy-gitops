@@ -46,9 +46,11 @@ resources:
 - argocd/namespace-ibm-common-services.yaml
 - argocd/namespace-guardium.yaml
 - argocd/namespace-openshift-storage.yaml
-- argocd/storage.yaml 
 - argocd/scc-guardium.yaml
 - argocd/rbac/guardium.yaml
+- argocd/machinesets/storage.yaml
+- argocd/machinesets/db2wh.yaml
+- argocd/storage.yaml 
 
 patches:
 - target:
