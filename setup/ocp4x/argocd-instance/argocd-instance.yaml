@@ -586,6 +586,23 @@ spec:
         hs.status = "Progressing"
         hs.message = "Unknown"
         return hs
+    machine.openshift.io/MachineSet:
+      health.lua: |
+        hs = {}
+        if obj.status ~= nil then
+          if obj.status.phase ~= nil then
+            hs.message = obj.status.phase
+            if (obj.status.replicas == obj.status.readyReplicas and obj.status.replicas == obj.status.availableReplicas) then
+              hs.status = "Healthy"
+            else
+              hs.status = "Progressing"
+            end
+            return hs
+          end
+        end
+        hs.status = "Progressing"
+        hs.message = "Unknown"
+        return hs
     machine.openshift.io/obj.sta:
       health.lua: |
         hs = {}
