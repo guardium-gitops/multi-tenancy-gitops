@@ -27,6 +27,7 @@ spec:
             ami: ami-09145c219cb4df3e1
         
         machineset:
+          replicas: 2
           name: guardium
           clusterRole: worker
           clusterType: worker
