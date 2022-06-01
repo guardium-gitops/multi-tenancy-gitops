@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: machineset-guardium
+  labels:
+    gitops.tier.layer: infra
+  annotations:
+    argocd.argoproj.io/sync-wave: "100"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: infra
+  source:
+    path: machinesets-v2
+    helm:
+      values: |
+        infrastructureId: guardium-44fjd
+
+        cloud:
+          name: aws
+          managed: false
+          region: us-east-2
+          aws:
+            ami: ami-09145c219cb4df3e1
+        
+        machineset:
+          name: guardium
+          clusterRole: worker
+          clusterType: worker
+          instanceType: m5.4xlarge 
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+

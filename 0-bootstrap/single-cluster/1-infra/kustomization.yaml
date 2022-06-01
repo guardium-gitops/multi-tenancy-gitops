@@ -50,6 +50,7 @@ resources:
 - argocd/rbac/guardium.yaml
 - argocd/machinesets/storage.yaml
 - argocd/machinesets/db2wh.yaml
+- argocd/machinesets/guardium.yaml
 - argocd/storage.yaml 
 
 patches:
