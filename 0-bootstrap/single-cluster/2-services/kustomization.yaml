@@ -110,7 +110,7 @@ resources:
 #- argocd/instances/oadp-instance.yaml
 #- argocd/instances/baas-instance.yaml
 
-# Guardium Insights.yaml
+# Guardium Insights
 - argocd/operators/ibm-catalogs.yaml
 - argocd/operators/ibm-foundations.yaml 
 - argocd/instances/ibm-foundational-services-instance.yaml

@@ -17,7 +17,7 @@ spec:
     path: machinesets-v2
     helm:
       values: |
-        infrastructureId: guardium-qb9t7
+        infrastructureId: guardium-rzkhp
 
         cloud:
           name: aws
