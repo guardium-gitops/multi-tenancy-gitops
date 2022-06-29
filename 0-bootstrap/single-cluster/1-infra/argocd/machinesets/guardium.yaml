@@ -17,7 +17,7 @@ spec:
     path: machinesets-v2
     helm:
       values: |
-        infrastructureId: guardium-lb4kr
+        infrastructureId: guardium-prcfw
 
         cloud:
           name: aws

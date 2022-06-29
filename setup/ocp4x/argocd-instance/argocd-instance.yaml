@@ -54,6 +54,7 @@ spec:
         - /metadata/annotations/olm.providedAPIs
         - /status/lastUpdated
     argoproj.io/Application:
+      health.lua.useOpenLibs: true
       ignoreDifferences: |
         jsonPointers:
         - /spec/source/targetRevision
@@ -62,14 +63,18 @@ spec:
         hs = {}
         hs.status = "Progressing"
         hs.message = ""
-        for i, resource in ipairs(obj.status.resources) do
-          if (resource.health.status != "Healthy") and (resource.status != "Synced") then
-            hs.status = "Progressing"
-            hs.message = "Waiting on" .. resource.kind .. " " .. resource.name .. " to be ready"
-            return hs
-          end
-        end
         if obj.status ~= nil then
+          for i, resource in ipairs(obj.status.resources) do
+            if resource.status ~= "Synced" then
+              if resource.status.health ~= nil then
+                if resource.status.health.status ~= "Healthy" then
+                  hs.status = "Progressing"
+                  hs.message = "Waiting on " .. resource.kind .. " " .. resource.name .. " to be ready"
+                  return hs
+                end
+              end
+            end
+          end
           if obj.status.health ~= nil then
             hs.status = obj.status.health.status
             if obj.status.health.message ~= nil then
