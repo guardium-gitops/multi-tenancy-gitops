@@ -17,7 +17,7 @@ spec:
     path: machinesets-v2
     helm:
       values: |
-        infrastructureId: guardium-prcfw
+        infrastructureId: guardium-g56lp
 
         cloud:
           name: aws

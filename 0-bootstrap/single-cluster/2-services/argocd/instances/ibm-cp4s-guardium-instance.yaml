@@ -22,7 +22,7 @@ spec:
         version: 3.1.5
         license: L-TESX-C86NC4
         templateSize: values-small
-        domain: guardium.aws.ibm-gtmaa.dev
+        domain: guardium.itz-aws.ibmdtepaks.com
         storageClassRWO: gp2
   syncPolicy:
     automated:
