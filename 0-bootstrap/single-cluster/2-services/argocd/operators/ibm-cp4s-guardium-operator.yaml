@@ -26,4 +26,11 @@ spec:
       selfHeal: true
   
   
-  
+# TODO:
+# OpenShift Versions
+# Supported Clouds
+# OnPremise
+# Storage
+# Access
+# Update to Latest 3.1.8
+# Leverage on SaaS?
